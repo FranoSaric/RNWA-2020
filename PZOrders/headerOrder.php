@@ -22,7 +22,7 @@
         <a class="nav-link" href="../PZOrders/indexOrder.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../PZOrders/createOrder.php">Create a order</a>
+        <a class="nav-link" href="../PZOrders/create.php">Create a order</a>
       </li>
       
       

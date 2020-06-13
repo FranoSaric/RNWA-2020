@@ -16,7 +16,7 @@ if (isset($_POST['orderNumber']) && isset ($_POST['orderDate'])  && isset($_POST
   $sql = 'UPDATE orders SET orderNumber=:orderNumber, orderDate=:orderDate, requiredDate=:requiredDate, shippedDate=:shippedDate, status=:status, comments=:comments, customerNumber=:customerNumber WHERE orderNumber=:orderNumber';
   $statement = $connection->prepare($sql);
   if ($statement->execute([':orderNumber' => $orderNumber, ':orderDate' => $orderDate, ':requiredDate' => $requiredDate, ':shippedDate' => $shippedDate,':status' => $status,':comments' => $comments,':customerNumber' => $customerNumber])) {
-    header("Location: /crud/indexOrder.php");
+    header("Location: /BIRTandAJAX/PZOrders/indexOrder.php");
   }
 
 

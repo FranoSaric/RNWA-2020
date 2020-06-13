@@ -18,7 +18,7 @@ if (isset($_POST['productCode']) && isset ($_POST['productName'])  && isset($_PO
   $sql = 'UPDATE products SET productCode=:productCode, productName=:productName, productLine=:productLine, productScale=:productScale, productVendor=:productVendor, productDescription=:productDescription, quantityInStock=:quantityInStock, buyPrice=:buyPrice, MSRP=:MSRP WHERE productCode=:productCode';
   $statement = $connection->prepare($sql);
   if ($statement->execute([':productCode' => $productCode, ':productName' => $productName, ':productLine' => $productLine, ':productScale' => $productScale,':productVendor' => $productVendor,':productDescription' => $productDescription,':quantityInStock' => $quantityInStock,':buyPrice' => $buyPrice,':MSRP' => $MSRP])) {
-    header("Location: /crud");
+    header("Location: /BIRTandAJAX/PZProducts/index.php");
   }
 
 

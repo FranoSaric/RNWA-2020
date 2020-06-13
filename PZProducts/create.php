@@ -11,7 +11,7 @@ if (isset($_POST['productCode']) && isset ($_POST['productName'])  && isset($_PO
   $quantityInStock = $_POST['quantityInStock'];
   $buyPrice = $_POST['buyPrice'];
   $MSRP = $_POST['MSRP'];
-  $sql = 'INSERT INTO products(productCode, productName, productLine, productScale, productVendor, productDescription, quantityInStock, buyPrice, MSRP) VALUES(:productCode, :productName, :productLine, :productScale, :productVendor, :productDescription, quantityInStock, :buyPrice, :MSRP)';
+  $sql = 'INSERT INTO products(productCode, productName, productLine, productScale, productVendor, productDescription, quantityInStock, buyPrice, MSRP) VALUES(:productCode, :productName, :productLine, :productScale, :productVendor, :productDescription, :quantityInStock, :buyPrice, :MSRP)';
   $statement = $connection->prepare($sql);
   if ($statement->execute([':productCode' => $productCode, ':productName' => $productName, ':productLine' => $productLine, ':productScale' => $productScale,':productVendor' => $productVendor,':productDescription' => $productDescription,':quantityInStock' => $quantityInStock,':buyPrice' => $buyPrice,':MSRP' => $MSRP])) {
     $message = 'data inserted successfully';
